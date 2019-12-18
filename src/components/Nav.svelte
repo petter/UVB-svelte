@@ -1,50 +1,60 @@
 <script>
-  import { cubicInOut } from "svelte/easing";
-  export let segment;
-  let expanding = false;
-  let open = false;
-  let h;
+	export let segment;
 </script>
 
 <style>
-  .container {
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+	nav {
+		border-bottom: 1px solid rgba(255,62,0,0.1);
+		font-weight: 300;
+		padding: 0 1em;
+	}
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    background-color: orange;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    transition: all 250ms ease-in-out;
-  }
+	ul {
+		margin: 0;
+		padding: 0;
+	}
 
-  a {
-    padding: 0.5em 2em;
-    text-align: center;
-  }
+	/* clearfix */
+	ul::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	li {
+		display: block;
+		float: left;
+	}
+
+	.selected {
+		position: relative;
+		display: inline-block;
+	}
+
+	.selected::after {
+		position: absolute;
+		content: '';
+		width: calc(100% - 1em);
+		height: 2px;
+		background-color: rgb(255,62,0);
+		display: block;
+		bottom: -1px;
+	}
+
+	a {
+		text-decoration: none;
+		padding: 1em 0.5em;
+		display: block;
+	}
 </style>
 
-<div class="container">
-  <div class="content">
-    <a on:click|preventDefault={() => (open = !open)} href="/">MENU</a>
-    {#if open}
-      <nav>
-        <ul>
-          <li>
-            <a class:selected={segment === undefined} href=".">Home</a>
-          </li>
-          <li>
-            <a class:selected={segment === 'about'} href="about">About</a>
-          </li>
-        </ul>
-      </nav>
-    {/if}
-  </div>
-</div>
+<nav>
+	<ul>
+		<li><a class:selected='{segment === undefined}' href='.'>home</a></li>
+		<li><a class:selected='{segment === "about"}' href='about'>about</a></li>
+
+		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
+		     the blog data when we hover over the link or tap it on a touchscreen -->
+		<li><a rel=prefetch class:selected='{segment === "blog"}' href='blog'>blog</a></li>
+	</ul>
+</nav>
