@@ -4,7 +4,7 @@
 
     let menuOpen = false;
 
-    let routes = [
+    const routes = [
         {
             href: '.',
             text: 'Hjem'
@@ -18,26 +18,31 @@
             text: 'Kontakt'
         }
     ];
+
+    const navBg = 'bg-blue-800';
+    const activeText = 'text-indigo-100';
+    const linkClasses = `text-indigo-200 hover:${activeText} transition-colors transition-100`;
 </script>
 
 <nav
-    class="flex items-center flex-wrap justify-between p-6 bg-blue-800
-    text-blue-100">
+    class="relative w-full flex items-center flex-wrap justify-between p-6
+    bg-blue-800 {activeText}">
     <div class="flex items-center w-10/12 lg:w-auto">
         <span class="font-semibold text-l sm:text-xl tracking-tight uppercase">
             Surnadal Veterinærpraksis
         </span>
     </div>
-    <Burger class="lg:hidden" on:click={() => (menuOpen = !menuOpen)} />
+    <Burger
+        class="{linkClasses} w-6 lg:hidden"
+        on:click={() => (menuOpen = !menuOpen)} />
     <div
         class:hidden={!menuOpen}
-        class="w-full block lg:flex lg:visible lg:items-center lg:w-auto">
+        class="absolute top-1 left-0 right-0 p-6 pt-0 lg:static lg:p-0 block
+        bg-blue-800 lg:flex lg:items-center lg:w-auto">
         <div class="text-sm lg:flex-grow">
             {#each routes as route}
                 <a
-                    class="block mt-4 text-blue-200 hover:text-blue-100
-                    lg:inline-block lg:mt-0 mr-4 transition-colors
-                    transition-100"
+                    class="{linkClasses} block mt-4 lg:inline-block lg:mt-0 mr-4"
                     href={route.href}
                     on:click={() => (menuOpen = false)}>
                     {route.text}

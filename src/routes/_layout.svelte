@@ -6,20 +6,19 @@
 </script>
 
 <style>
-    main {
-        position: relative;
-        max-width: 56em;
-        background-color: white;
-        padding: 2em;
-        margin: 0 auto;
-        box-sizing: border-box;
+    .layout {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
     }
 </style>
 
-<Nav {segment} />
+<div class="layout">
+    <Nav {segment} />
 
-<main>
-    <slot />
-</main>
+    <main class="bg-indigo-300">
+        <slot />
+    </main>
 
-<Footer />
+    <Footer />
+</div>

@@ -9,7 +9,7 @@
     }
 </style>
 
-<button class="w-6 text-blue-200 hover:text-white {className}" on:click>
+<button class={className} on:click>
     <svg
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
