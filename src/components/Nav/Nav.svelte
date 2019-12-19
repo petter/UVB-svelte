@@ -19,14 +19,14 @@
         }
     ];
 
-    const navBg = 'bg-blue-800';
+    const navBg = 'bg-blue-900';
     const activeText = 'text-indigo-100';
     const linkClasses = `text-indigo-200 hover:${activeText} transition-colors transition-100`;
 </script>
 
 <nav
-    class="relative w-full flex items-center flex-wrap justify-between p-6
-    bg-blue-800 {activeText}">
+    class="relative w-full flex items-center flex-wrap justify-between p-6 {navBg}
+    {activeText}">
     <div class="flex items-center w-10/12 lg:w-auto">
         <span class="font-semibold text-l sm:text-xl tracking-tight uppercase">
             Surnadal Veterinærpraksis
@@ -37,8 +37,8 @@
         on:click={() => (menuOpen = !menuOpen)} />
     <div
         class:hidden={!menuOpen}
-        class="absolute top-1 left-0 right-0 p-6 pt-0 lg:static lg:p-0 block
-        bg-blue-800 lg:flex lg:items-center lg:w-auto">
+        class="absolute top-1 left-0 right-0 p-6 pt-0 lg:static lg:p-0 block {navBg}
+        lg:flex lg:items-center lg:w-auto">
         <div class="text-sm lg:flex-grow">
             {#each routes as route}
                 <a
