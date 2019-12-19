@@ -5,18 +5,10 @@
     export let segment;
 </script>
 
-<style>
-    .layout {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        min-height: 100vh;
-    }
-</style>
-
-<div class="layout">
+<div class="min-h-screen flex flex-col">
     <Nav {segment} />
 
-    <main class="bg-indigo-300">
+    <main class="bg-indigo-300 flex-1">
         <slot />
     </main>
 
