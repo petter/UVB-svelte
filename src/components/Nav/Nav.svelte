@@ -21,9 +21,9 @@
 </script>
 
 <nav
-    class="flex items-center justify-between flex-wrap p-6 bg-blue-600
+    class="flex items-center flex-wrap justify-between p-6 bg-blue-600
     text-white">
-    <div class="flex items-center">
+    <div class="flex items-center w-10/12 lg:auto">
         <span class="font-semibold text-xl tracking-tight uppercase">
             Surnadal Veterinærpraksis
         </span>
