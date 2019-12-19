@@ -2,7 +2,7 @@
     import Burger from './Burger.svelte';
     // export let segment;
 
-    let menuOpen = true;
+    let menuOpen = false;
 
     let routes = [
         {
