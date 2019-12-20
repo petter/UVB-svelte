@@ -1,27 +1,38 @@
 <script>
     import Burger from './Burger.svelte';
-    // export let segment;
+    export let segment;
 
-    let menuOpen = false;
+    let menuOpen = true;
+    $: {
+        console.log(segment);
+    }
 
     const routes = [
         {
             href: '.',
+            segment: undefined,
             text: 'Hjem'
         },
         {
             href: 'about',
+            segment: 'about',
             text: 'Om oss'
         },
         {
             href: 'contact',
+            segment: 'contact',
             text: 'Kontakt'
         }
     ];
 
     const navBg = 'bg-blue-900';
-    const activeText = 'text-indigo-100';
-    const linkClasses = `text-indigo-200 hover:${activeText} transition-colors transition-100`;
+    const activeColor = 'indigo-100';
+    const activeText = `text-${activeColor}`;
+    const transitionDuration = 'transition-100';
+    const linkClasses = (textActive = false) =>
+        `${
+            textActive ? activeText : 'text-indigo-300'
+        } hover:${activeText} transition-colors ${transitionDuration}`;
 </script>
 
 <nav
@@ -33,16 +44,22 @@
         </span>
     </div>
     <Burger
-        class="{linkClasses} w-6 lg:hidden"
+        class="{linkClasses()} w-6 lg:hidden"
         on:click={() => (menuOpen = !menuOpen)} />
     <div
         class:hidden={!menuOpen}
         class="absolute z-10 top-1 left-0 right-0 p-6 pt-0 lg:static lg:p-0
         block {navBg} lg:flex lg:items-center lg:w-auto">
-        <div class="text-sm lg:flex-grow">
+        <div
+            class="flex text-sm justify-start items-start flex-col lg:flex-row
+            lg:flex-grow">
             {#each routes as route}
                 <a
-                    class="{linkClasses} block mt-4 lg:inline-block lg:mt-0 mr-4"
+                    class="{linkClasses(segment === route.segment)} border-solid
+                    hover:border-solid hover:border-{activeColor} mt-4 lg:mt-0
+                    mr-4 transition-border {transitionDuration}
+                    {segment === route.segment ? `border-b border-${activeColor} pt-1` : 'py-1 border-b border-indigo-300'}
+                    "
                     href={route.href}
                     on:click={() => (menuOpen = false)}>
                     {route.text}

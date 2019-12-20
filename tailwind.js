@@ -6,6 +6,9 @@ module.exports = {
             }
         }
     },
-    variants: {},
+    variants: {
+        borderWidth: ['responsive', 'hover', 'focus'],
+        borderStyle: ['responsive', 'hover', 'focus']
+    },
     plugins: [require('tailwindcss-transitions')()]
 };
