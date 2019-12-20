@@ -2,7 +2,7 @@
     import Burger from './Burger.svelte';
     // export let segment;
 
-    let menuOpen = false;
+    let menuOpen = true;
 
     const routes = [
         {
@@ -37,8 +37,8 @@
         on:click={() => (menuOpen = !menuOpen)} />
     <div
         class:hidden={!menuOpen}
-        class="absolute top-1 left-0 right-0 p-6 pt-0 lg:static lg:p-0 block {navBg}
-        lg:flex lg:items-center lg:w-auto">
+        class="absolute z-10 top-1 left-0 right-0 p-6 pt-0 lg:static lg:p-0
+        block {navBg} lg:flex lg:items-center lg:w-auto">
         <div class="text-sm lg:flex-grow">
             {#each routes as route}
                 <a
