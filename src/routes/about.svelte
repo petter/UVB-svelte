@@ -1,5 +1,45 @@
+<script>
+    import Card from '../components/About/Card.svelte';
+
+    const cardClasses = 'w-full sm:w-5/12 lg:w-full';
+</script>
+
+<style>
+    @media (min-width: 1024px) {
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2rem;
+        }
+    }
+</style>
+
 <svelte:head>
-  <title>About</title>
+    <title>Om oss</title>
 </svelte:head>
 
-<h1>About</h1>
+<div class="grid p-6">
+    <img
+        src="https://images.unsplash.com/photo-1514328525431-eac296c01d82?ixlib=rb-1.2.1&auto=format&fit=crop&w=2197&q=80"
+        alt=""
+        class="hidden lg:block" />
+    <div class="flex flex-col">
+        <h1 class="text-3xl text-gray-900 self-center">Vårt team</h1>
+        <div class="flex flex-wrap lg:flex-col flex-1 justify-around">
+            <Card
+                name="Vigdis Burger"
+                title="Daglig leder"
+                phone="916 43 977"
+                email="vigdis@uvb.no"
+                image="http://www.racemph.com/wp-content/uploads/2016/09/profile-image-placeholder.png"
+                class={cardClasses} />
+            <Card
+                name="MVDr. Uzi Burger"
+                title="Veterinær"
+                phone="916 43 977"
+                email="uzi@uvb.no"
+                image="http://www.racemph.com/wp-content/uploads/2016/09/profile-image-placeholder.png"
+                class={cardClasses} />
+        </div>
+    </div>
+</div>
