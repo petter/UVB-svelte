@@ -2,7 +2,7 @@
     import Burger from './Burger.svelte';
     export let segment;
 
-    let menuOpen = true;
+    let menuOpen = false;
     $: {
         console.log(segment);
     }
@@ -57,8 +57,7 @@
                 <a
                     class="{linkClasses(segment === route.segment)} border-solid
                     hover:border-solid hover:border-{activeColor} mt-4 lg:mt-0
-                    mr-4 transition-border {transitionDuration}
-                    {segment === route.segment ? `border-b border-${activeColor} pt-1` : 'py-1 border-b border-indigo-300'}
+                    border-b mr-4 transition-border {transitionDuration} py-1 {segment === route.segment ? `border-${activeColor}` : 'border-indigo-300'}
                     "
                     href={route.href}
                     on:click={() => (menuOpen = false)}>
