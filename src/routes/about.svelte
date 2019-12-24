@@ -22,10 +22,10 @@
     <img
         src="https://images.unsplash.com/photo-1514328525431-eac296c01d82?ixlib=rb-1.2.1&auto=format&fit=crop&w=2197&q=80"
         alt=""
-        class="hidden lg:block" />
+        class="hidden lg:block object-cover object-center h-full w-full" />
     <div class="flex flex-col">
         <h1 class="text-3xl text-gray-900 self-center">Vårt team</h1>
-        <div class="flex flex-wrap lg:flex-col flex-1 justify-around">
+        <div class="flex flex-wrap lg:flex-col flex-1 justify-around py-6">
             <Card
                 name="Vigdis Burger"
                 title="Daglig leder"
