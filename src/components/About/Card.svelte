@@ -22,6 +22,6 @@
         <h2 class="text-lg font-semibold">{name}</h2>
         <div class="font-hairline text-indigo-800">{title}</div>
         <div class="">{phone}</div>
-        <Link href="mailto:{email}" class="">{email}</Link>
+        <Link href="mailto:{email}">{email}</Link>
     </div>
 </div>
