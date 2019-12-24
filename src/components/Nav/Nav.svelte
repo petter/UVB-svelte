@@ -3,10 +3,6 @@
     export let segment;
 
     let menuOpen = false;
-    $: {
-        console.log(segment);
-    }
-
     const routes = [
         {
             href: '.',
