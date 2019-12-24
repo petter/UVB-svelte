@@ -1,6 +1,6 @@
 <script>
     export let href;
-    let className;
+    let className = '';
     export { className as class };
 
     let defaultColor = 'blue-700';
