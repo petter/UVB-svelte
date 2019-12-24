@@ -1,5 +1,6 @@
 <script>
     import Card from '../components/About/Card.svelte';
+    import H1 from '../components/UI/H1.svelte';
 
     const cardClasses = 'w-full sm:w-5/12 lg:w-full';
 </script>
@@ -24,8 +25,8 @@
         alt=""
         class="hidden lg:block object-cover object-center h-full w-full" />
     <div class="flex flex-col">
-        <h1 class="text-3xl text-gray-900 self-center">Vårt team</h1>
-        <div class="flex flex-wrap lg:flex-col flex-1 justify-around py-6">
+        <H1 class="self-center">Vårt team</H1>
+        <div class="flex flex-wrap lg:flex-col flex-1 justify-start py-6">
             <Card
                 name="Vigdis Burger"
                 title="Daglig leder"
