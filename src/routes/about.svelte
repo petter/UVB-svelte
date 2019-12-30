@@ -26,7 +26,9 @@
         class="hidden lg:block object-cover object-center h-full w-full" />
     <div class="flex flex-col">
         <H1 class="self-center">Vårt team</H1>
-        <div class="flex flex-wrap lg:flex-col flex-1 justify-start py-6">
+        <div
+            class="flex flex-wrap lg:flex-col flex-1 justify-around
+            lg:justify-start py-6">
             <Card
                 name="Vigdis Burger"
                 title="Daglig leder"

@@ -14,14 +14,13 @@
         rounded border-2 border-gray-600 focus:bg-white focus:border-gray-900
         outline-none ${className}`;
 
-    let minHeight = '0px';
-    let height = 'auto';
     let textareaRef;
 
     onMount(() => {
         if (type === 'textarea') {
-            minHeight = `${textareaRef.scrollHeight}px`;
-            height = minHeight;
+            const height = `${textareaRef.scrollHeight}px`;
+            textareaRef.style.minHeight = height;
+            textareaRef.style.height = height;
         }
     });
 
@@ -29,11 +28,9 @@
         if (type !== 'textarea') {
             value = event.target.value;
         } else {
-            event.target.height = '0px';
-            height = '0px';
-            requestAnimationFrame(
-                () => (height = `${event.target.scrollHeight}px`)
-            );
+            console.log(event);
+            event.target.style.height = '0px';
+            event.target.style.height = `${event.target.scrollHeight}px`;
         }
     };
 </script>
@@ -48,8 +45,7 @@
             {id}
             {name}
             {placeholder}
-            on:input|preventDefault={handleInput}
-            style="min-height: {minHeight}; height: {height}"
+            on:input={handleInput}
             bind:value />
     {:else}
         <input
