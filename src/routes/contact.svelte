@@ -7,8 +7,11 @@
         message = '';
 </script>
 
-<div class="flex flex-col max-w-4xl w-full mx-auto p-6">
+<svelte:head>
+    <title>Kontakt oss</title>
+</svelte:head>
 
+<div class="flex flex-col max-w-4xl w-full mx-auto p-6">
     <H1>For spørsmål eller timebestilling - kontakt oss her</H1>
     <form>
         <Input
