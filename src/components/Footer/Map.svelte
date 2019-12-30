@@ -50,17 +50,14 @@
     });
 </script>
 
-<style>
-    div {
-        height: 20vh;
-        width: 100%;
-    }
-</style>
-
 <svelte:head>
     <link
         href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css"
         rel="stylesheet" />
 </svelte:head>
 
-<div id="map" />
+<div class="flex flex-col w-full">
+    <h2>Klinikken</h2>
+    <div id="map" class="w-full h-56" />
+
+</div>
