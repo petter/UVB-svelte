@@ -12,7 +12,7 @@
 </script>
 
 <div
-    class="flex flex-col md:flex-row bg-indigo-100 items-center rounded-lg my-2
+    class="flex flex-col md:flex-row bg-indigo-200 items-center rounded-lg my-2
     p-6 {className}">
     <img
         src={image}
