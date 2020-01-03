@@ -48,7 +48,7 @@
 
 <style>
     :global(.marker) {
-        background-image: url('/mapbox-icon.png');
+        background-image: url('/img/mapbox-icon.png');
         background-size: cover;
         width: 36px;
         height: 36px;
