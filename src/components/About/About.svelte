@@ -1,6 +1,6 @@
 <script>
-    import Card from '../components/About/Card.svelte';
-    import H1 from '../components/UI/H1.svelte';
+    import Card from './Card.svelte';
+    import H1 from '../UI/H1.svelte';
 
     const cardClasses = 'w-full sm:w-5/12 lg:w-full';
 </script>
@@ -15,11 +15,7 @@
     }
 </style>
 
-<svelte:head>
-    <title>Om oss</title>
-</svelte:head>
-
-<div class="grid p-6">
+<section class="grid p-6" id="about">
     <img
         src="https://images.unsplash.com/photo-1514328525431-eac296c01d82?ixlib=rb-1.2.1&auto=format&fit=crop&w=2197&q=80"
         alt=""
@@ -45,4 +41,4 @@
                 class={cardClasses} />
         </div>
     </div>
-</div>
+</section>

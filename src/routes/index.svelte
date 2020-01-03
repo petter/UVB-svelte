@@ -1,4 +1,6 @@
 <script>
+    import About from '../components/About/About.svelte';
+    import Map from '../components/Map.svelte';
     import { navHeight } from '../shared/constants';
 </script>
 
@@ -6,8 +8,13 @@
     <title>Surnadal veterinærpraksis</title>
 </svelte:head>
 
-<div
+<header
+    id="header"
     class="flex flex-grow -mt-{navHeight} h-screen w-full justify-center
-    items-center">
+    items-center bg-gray-400">
     <img src="logo.jpg" alt="Surnadal Veterinærpraksis logo" />
-</div>
+</header>
+
+<About />
+
+<Map />

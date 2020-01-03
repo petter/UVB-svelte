@@ -79,7 +79,6 @@
 </svelte:head>
 
 <div class="flex flex-col w-full">
-    <h2>Klinikken</h2>
-    <div id="map" class="w-full h-56" />
+    <div id="map" class="w-full max-h-1/2 h-screen" />
 
 </div>
