@@ -55,7 +55,10 @@
 <style>
     :global(.marker) {
         background-image: url('/img/mapbox-icon.png');
-        background-size: cover;
+        background-color: rgb(42, 67, 101);
+        background-size: 75% 75%;
+        background-position: center center;
+        background-repeat: no-repeat;
         width: 36px;
         height: 36px;
         border-radius: 50%;
