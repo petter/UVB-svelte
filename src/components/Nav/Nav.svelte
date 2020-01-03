@@ -1,5 +1,7 @@
 <script>
     import Burger from './Burger.svelte';
+    import { navHeight } from '../../shared/constants';
+
     export let segment;
 
     let menuOpen = false;
@@ -32,7 +34,8 @@
 </script>
 
 <nav
-    class="relative w-full flex items-center flex-wrap justify-between p-6 {navBg}
+    class="fixed z-40 w-full h-{navHeight} flex items-center flex-wrap
+    justify-between px-6 {navBg}
     {activeText}">
     <div class="flex items-center w-10/12 lg:w-auto">
         <span class="font-semibold text-l sm:text-xl tracking-tight uppercase">
