@@ -81,12 +81,6 @@
     }
 </style>
 
-<svelte:head>
-    <link
-        href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css"
-        rel="stylesheet" />
-</svelte:head>
-
 <div class="flex flex-col w-full">
     <div id="map" class="w-full max-h-1/2 h-screen" />
 
