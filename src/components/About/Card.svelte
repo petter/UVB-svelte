@@ -1,10 +1,10 @@
 <script>
-    import Link from '../UI/Link.svelte';
+    // import Link from '../UI/Link.svelte';
 
     export let name;
     export let title;
     export let phone;
-    export let email;
+    // export let email;
     export let image;
 
     let className;
@@ -22,6 +22,6 @@
         <h2 class="text-lg font-semibold">{name}</h2>
         <div class="font-hairline text-indigo-800">{title}</div>
         <div class="">{phone}</div>
-        <Link href="mailto:{email}">{email}</Link>
+        <!-- <Link href="mailto:{email}">{email}</Link> -->
     </div>
 </div>
