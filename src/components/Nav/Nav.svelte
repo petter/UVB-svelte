@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    import Wrapper from './Wrapper.svelte';
     import Burger from './Burger.svelte';
     import { navHeight } from '../../shared/constants';
 
@@ -13,51 +14,22 @@
             text: 'Hjem'
         },
         {
-            href: 'about',
-            segment: 'about',
-            text: 'Om oss'
-        },
-        {
             href: 'contact',
             segment: 'contact',
             text: 'Kontakt'
         }
     ];
 
-    let navBg = segment === undefined ? 'bg-transparent' : 'bg-blue-900';
-
-    onMount(() => {
-        window.addEventListener(
-            'scroll',
-            () =>
-                (navBg = window.scrollY < 50 ? 'bg-transparent' : 'bg-blue-900')
-        );
-    });
-
     const activeColor = 'indigo-100';
     const activeText = `text-${activeColor}`;
     const transitionDuration = 'transition-100';
-    const transitionBgDuration = 'transition-250';
     const linkClasses = (textActive = false) =>
         `${
             textActive ? activeText : 'text-indigo-300'
         } hover:${activeText} transition-colors ${transitionDuration}`;
 </script>
 
-<style>
-    nav.bg-transparent {
-        background-image: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(255, 255, 255, 0) 100%
-        );
-    }
-</style>
-
-<nav
-    class="fixed z-40 w-full h-{navHeight} flex items-center flex-wrap
-    justify-between px-6 {navBg} transition-bg {transitionBgDuration}
-    transition-all {activeText}">
+<Wrapper isHome={segment === undefined} class={activeText}>
     <div class="flex items-center w-10/12 lg:w-auto">
         <span class="font-semibold text-l sm:text-xl tracking-tight uppercase">
             Surnadal Veterinærpraksis
@@ -69,7 +41,7 @@
     <div
         class:hidden={!menuOpen}
         class="absolute z-10 top-1 left-0 right-0 p-6 pt-0 lg:static lg:p-0
-        block {navBg} lg:bg-transparent lg:flex lg:items-center lg:w-auto">
+        block bg-blue-900 lg:bg-transparent lg:flex lg:items-center lg:w-auto">
         <div
             class="flex text-sm justify-start items-start flex-col lg:flex-row
             lg:flex-grow">
@@ -86,4 +58,4 @@
             {/each}
         </div>
     </div>
-</nav>
+</Wrapper>
