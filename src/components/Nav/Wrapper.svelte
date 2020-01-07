@@ -8,6 +8,7 @@
 
     let navBg = 'bg-transparent';
     const scrollEventHandler = () => {
+        if (!process.browser) return;
         if (isHome)
             navBg = window.scrollY < 50 ? 'bg-transparent' : 'bg-blue-900';
         else navBg = 'bg-blue-900';

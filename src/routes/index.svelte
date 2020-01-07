@@ -15,8 +15,8 @@
         background-position: center;
     }
 
-    img {
-        filter: drop-shadow(2px 2px 2px black);
+    h1 {
+        text-shadow: 2px 2px 8px black;
     }
 </style>
 
@@ -27,12 +27,18 @@
 <header
     id="header"
     class="flex flex-grow flex-col -mt-{navHeight} h-screen w-full
-    justify-center md:justify-end items-center bg-black p-12">
-    <img
+    justify-center items-center bg-black">
+    <h1
+        class="uppercase font-bold text-white text-3xl md:text-4xl lg:text-5xl
+        w-full md:w-auto p-2 text-center overflow-hidden break-words">
+        Surnadal veterinærpraksis
+    </h1>
+
+    <!-- <img
         src="/img/logo/Original.svg"
         class="w-full md:w-1/2 {animStart ? 'opacity-75' : 'opacity-0'}
         transition-opacity transition-1000 transition-ease-in-out"
-        alt="Surnadal Veterinærpraksis logo" />
+        alt="Surnadal Veterinærpraksis logo" /> -->
 </header>
 
 <About />

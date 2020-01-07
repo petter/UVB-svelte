@@ -32,7 +32,7 @@
 <Wrapper isHome={segment === undefined} class={activeText}>
     <div class="flex items-center w-10/12 lg:w-auto">
         <span class="font-semibold text-l sm:text-xl tracking-tight uppercase">
-            Surnadal Veterinærpraksis
+            Surnadal veterinærpraksis
         </span>
     </div>
     <Burger
