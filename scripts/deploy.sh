@@ -1,6 +1,6 @@
 ssh root@142.93.235.31 <<EOF
 		cd app/UVB-svelte
-		pm2 stop 0
+		pm2 stop all
 		git pull
 		npm install
 		npm run build
