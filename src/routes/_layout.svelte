@@ -9,7 +9,7 @@
 <div class="min-h-screen flex flex-col flex-grow">
     <Nav {segment} />
 
-    <main class="flex relative bg-indigo-100 flex-grow flex-col pt-{navHeight}">
+    <main class="flex relative bg-indigo-100 flex-grow flex-col pt-20">
         <slot />
     </main>
 
