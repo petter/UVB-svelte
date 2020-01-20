@@ -15,9 +15,11 @@
         "deploy": "./scripts/deploy.sh"
     },
     "dependencies": {
+        "axios": "^0.19.1",
         "body-parser": "^1.19.0",
         "compression": "^1.7.1",
         "dotenv": "^8.2.0",
+        "dotenv-flow": "^3.1.0",
         "mapbox-gl": "^1.6.1",
         "nodemailer": "^6.4.2",
         "polka": "^0.5.2",

@@ -2,7 +2,9 @@
     import Input from '../components/UI/Input.svelte';
     import H1 from '../components/UI/H1.svelte';
 
-    let formValues = [
+    import { sendMail } from '../utils/frontend/api/mail';
+
+    let initialFormValues = [
         {
             id: 'name',
             type: 'text',
@@ -37,6 +39,11 @@
         }
     ];
 
+    let formValues = [];
+    const resetForm = () =>
+        (formValues = initialFormValues.map(e => ({ ...e })));
+    resetForm();
+
     let error = '';
 
     $: formValues, (error = '');
@@ -44,6 +51,16 @@
     const formSubmit = () => {
         if (formValues.some(e => e.required && e.value === '')) {
             error = 'Ikke alle påkrevde felt har blitt fylt ut.';
+        } else {
+            const email = formValues.find(e => e.id === 'email').value;
+            const name = formValues.find(e => e.id === 'name').value;
+            const message = formValues.find(e => e.id === 'message').value;
+            const phone = formValues.find(e => e.id === 'phone').value;
+            sendMail(email, name, message, phone)
+                .then(() => {
+                    resetForm();
+                })
+                .catch(err => console.error(err));
         }
     };
 </script>
@@ -51,7 +68,6 @@
 <svelte:head>
     <title>Kontakt oss</title>
 </svelte:head>
-
 <div class="flex flex-col max-w-4xl w-full mx-auto p-6">
     <H1>For spørsmål eller timebestilling - kontakt oss her</H1>
     <div class="text-red-700">{error}</div>

@@ -1,5 +1,5 @@
 <script>
-    import { navHeight } from '../../shared/constants';
+    import { navHeight } from '../../utils/frontend/constants';
     import { onMount } from 'svelte';
 
     let additionalClassNames = '';

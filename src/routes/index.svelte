@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import About from '../components/About/About.svelte';
     import Map from '../components/Map.svelte';
-    import { navHeight } from '../shared/constants';
+    import { navHeight } from '../utils/frontend/constants';
 
     let animStart = false;
     onMount(() => setTimeout(() => (animStart = true), 250));

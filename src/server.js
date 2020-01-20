@@ -4,26 +4,30 @@ import compression from 'compression';
 import { json } from 'body-parser';
 import * as sapper from '@sapper/server';
 import nodemailer from 'nodemailer';
-require('dotenv').config();
+import mail from './utils/backend/mail';
+require('dotenv-flow').config();
 
-const { EMAIL_ACC, EMAIL_PWD } = process.env;
+const {
+    EMAIL_SMTP_HOST,
+    EMAIL_SMTP_PORT,
+    EMAIL_SMTP_USER,
+    EMAIL_SMTP_PASS
+} = process.env;
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
+const transport = nodemailer.createTransport({
+    host: EMAIL_SMTP_HOST,
+    port: EMAIL_SMTP_PORT,
     auth: {
-        user: EMAIL_ACC,
-        pass: EMAIL_PWD
+        user: EMAIL_SMTP_USER,
+        pass: EMAIL_SMTP_PASS
     }
 });
+mail.setTransport(transport);
 
 polka()
     .use(json())
-    .use((req, _, next) => {
-        req.emailTransporter = transporter;
-        next();
-    })
     .use(
         compression({ threshold: 0 }),
         sirv('static', { dev }),

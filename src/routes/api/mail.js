@@ -1,26 +1,33 @@
+import mail from '../../utils/backend/mail';
+
 const validateField = val => val !== undefined;
 
+export const get = (req, res) => res.end(JSON.stringify(process.env));
 export const post = (req, res) => {
-    const { email, phone, subject, name, message } = req.body;
-    const valid = [email, phone, subject, name, message].every(validateField);
-
+    console.log(req.body);
+    const { email, name, phone, message } = req.body;
+    const valid = [email, name, message].every(validateField);
     if (!valid)
-        return res.end(
-            JSON.stringify({ error: 'Not all required fields were submitted.' })
+        return res.status(400).end(
+            JSON.stringify({
+                error: 'Not all required fields were submitted.'
+            })
         );
 
-    req.emailTransporter.sendMail(
+    mail.send(
         {
-            from: 'pettersmoen@gmail.com',
-            to: email,
-            subject: subject,
-            text: `Mail fra ${name} (${phone}):\n${message}`
+            from: `${name} <${email}>`,
+            to: process.env['EMAIL_RCV'],
+            subject: `Kontaktskjema - ${name}`,
+            text: `${message}\n\n${name}${phone != '' ? `\n${phone}` : ''}`
         },
         (error, info) => {
             if (error) {
                 console.log(error);
+                res.status(400);
                 res.end(JSON.stringify({ error }));
             } else {
+                console.log('success');
                 res.end(JSON.stringify(info));
             }
         }
