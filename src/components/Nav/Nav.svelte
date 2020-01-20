@@ -2,7 +2,6 @@
     import { onMount } from 'svelte';
     import Wrapper from './Wrapper.svelte';
     import Burger from './Burger.svelte';
-    import { navHeight } from '../../utils/frontend/constants';
 
     export let segment;
 

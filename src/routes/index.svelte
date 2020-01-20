@@ -2,7 +2,6 @@
     import { onMount } from 'svelte';
     import About from '../components/About/About.svelte';
     import Map from '../components/Map.svelte';
-    import { navHeight } from '../utils/frontend/constants';
 
     let animStart = false;
     onMount(() => setTimeout(() => (animStart = true), 250));
@@ -26,8 +25,8 @@
 
 <header
     id="header"
-    class="flex flex-grow flex-col -mt-{navHeight} h-screen w-full
-    justify-center items-center bg-black">
+    class="flex flex-grow flex-col -mt-20 h-screen w-full justify-center
+    items-center bg-black">
     <h1
         class="uppercase font-bold text-white text-3xl md:text-4xl lg:text-5xl
         w-full md:w-auto p-2 text-center overflow-hidden break-words">

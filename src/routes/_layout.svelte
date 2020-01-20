@@ -1,7 +1,6 @@
 <script>
     import Nav from '../components/Nav/Nav.svelte';
     import Footer from '../components/Footer/Footer.svelte';
-    import { navHeight } from '../utils/frontend/constants';
 
     export let segment;
 </script>

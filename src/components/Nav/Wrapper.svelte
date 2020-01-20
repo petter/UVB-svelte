@@ -1,5 +1,4 @@
 <script>
-    import { navHeight } from '../../utils/frontend/constants';
     import { onMount } from 'svelte';
 
     let additionalClassNames = '';
@@ -32,10 +31,10 @@
     }
 </style>
 
-<div class="fixed top-0 left-0 w-full h-{navHeight} gradient z-40" />
+<div class="fixed top-0 left-0 w-full h-20 gradient z-40" />
 <nav
-    class="fixed z-40 w-full h-{navHeight} flex items-center flex-wrap
-    justify-between px-6 transition-bg transition-250 {navBg}
+    class="fixed z-40 w-full h-20 flex items-center flex-wrap justify-between
+    px-6 transition-bg transition-250 {navBg}
     {additionalClassNames}">
     <slot />
 </nav>
