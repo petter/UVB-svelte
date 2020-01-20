@@ -13,7 +13,7 @@
         "cy:open": "cypress open",
         "test": "run-p --race dev cy:run",
         "deploy": "./scripts/deploy.sh",
-        "copyEnv": "./scripts/copEnvh.sh"
+        "copyEnv": "./scripts/copyEnv.sh"
     },
     "dependencies": {
         "axios": "^0.19.1",
