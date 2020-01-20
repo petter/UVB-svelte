@@ -1,6 +1,7 @@
 <script>
     import Input from '../components/UI/Input.svelte';
     import H1 from '../components/UI/H1.svelte';
+    import Spinner from '../components/UI/Spinner.svelte';
 
     import { sendMail } from '../utils/frontend/api/mail';
 
@@ -45,6 +46,7 @@
     resetForm();
 
     let error = '';
+    let loading = false;
 
     $: formValues, (error = '');
 
@@ -52,6 +54,7 @@
         if (formValues.some(e => e.required && e.value === '')) {
             error = 'Ikke alle påkrevde felt har blitt fylt ut.';
         } else {
+            loading = true;
             const email = formValues.find(e => e.id === 'email').value;
             const name = formValues.find(e => e.id === 'name').value;
             const message = formValues.find(e => e.id === 'message').value;
@@ -60,7 +63,8 @@
                 .then(() => {
                     resetForm();
                 })
-                .catch(err => console.error(err));
+                .catch(err => console.error(err))
+                .finally(() => (loading = false));
         }
     };
 </script>
@@ -68,29 +72,39 @@
 <svelte:head>
     <title>Kontakt oss</title>
 </svelte:head>
+
 <div class="flex flex-col max-w-4xl w-full mx-auto p-6">
-    <H1>For spørsmål eller timebestilling - kontakt oss her</H1>
-    <div class="text-red-700">{error}</div>
-    <p>
-        Felt markert med
-        <span class="text-red-600 font-bold">*</span>
-        er påkrevd
-    </p>
-    <form on:submit|preventDefault={formSubmit}>
-        {#each formValues as formVal}
-            <Input
-                label={formVal.label}
-                placeholder={formVal.placeholder}
-                type={formVal.type}
-                name={formVal.id}
-                id={formVal.id}
-                bind:value={formVal.value}
-                required={formVal.required} />
-        {/each}
-        <button
-            type="submit"
-            class="mt-2 bg-blue-600 hover:bg-blue-700 text-white p-2 rounded">
-            Send
-        </button>
-    </form>
+    {#if loading}
+        <div
+            class="fixed left-0 top-0 w-full h-full flex justify-center
+            items-center">
+            <Spinner />
+        </div>
+    {:else}
+        <H1>For spørsmål eller timebestilling - kontakt oss her</H1>
+        <div class="text-red-700">{error}</div>
+        <p>
+            Felt markert med
+            <span class="text-red-600 font-bold">*</span>
+            er påkrevd
+        </p>
+        <form on:submit|preventDefault={formSubmit}>
+            {#each formValues as formVal}
+                <Input
+                    label={formVal.label}
+                    placeholder={formVal.placeholder}
+                    type={formVal.type}
+                    name={formVal.id}
+                    id={formVal.id}
+                    bind:value={formVal.value}
+                    required={formVal.required} />
+            {/each}
+            <button
+                type="submit"
+                class="mt-2 bg-blue-600 hover:bg-blue-700 text-white p-2 rounded">
+                Send
+            </button>
+
+        </form>
+    {/if}
 </div>
