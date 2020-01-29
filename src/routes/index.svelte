@@ -25,6 +25,7 @@
 <style>
     h1 {
         text-shadow: 2px 2px 8px black;
+        opacity: 90%;
     }
 </style>
 
@@ -38,7 +39,7 @@
     justify-center items-center bg-black">
     <Carousel images={carouselImages} />
     <h1
-        class="uppercase z-10 font-bold text-white text-3xl md:text-4xl
+        class="uppercase z-10 font-bold text-blue-100 text-3xl md:text-4xl
         lg:text-5xl w-full md:w-auto p-2 text-center overflow-hidden break-words">
         Surnadal veterinærpraksis
     </h1>

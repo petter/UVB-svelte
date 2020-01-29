@@ -5,7 +5,7 @@
 
     setInterval(() => {
         cur = (cur + 1) % images.length;
-    }, 3000);
+    }, 5000);
 </script>
 
 {#each images as { img, pos }, i}
