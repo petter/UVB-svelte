@@ -5,8 +5,6 @@
     export let segment;
 </script>
 
-<svelte:head />
-
 <div class="min-h-screen flex flex-col flex-grow">
     <Nav {segment} />
 
