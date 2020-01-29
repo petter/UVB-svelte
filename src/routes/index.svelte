@@ -2,18 +2,16 @@
     import { onMount } from 'svelte';
     import About from '../components/About/About.svelte';
     import Map from '../components/Map.svelte';
+    import Carousel from '../components/Header/Carousel.svelte';
 
-    let animStart = false;
-    onMount(() => setTimeout(() => (animStart = true), 250));
+    const carouselImages = [
+        '/img/uziwithdogswater.jpg',
+        '/img/baileymountain.jpg',
+        '/img/uziandbaileywater.jpg'
+    ];
 </script>
 
 <style>
-    header {
-        background-image: url(https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80);
-        background-size: cover;
-        background-position: center;
-    }
-
     h1 {
         text-shadow: 2px 2px 8px black;
     }
@@ -25,11 +23,12 @@
 
 <header
     id="header"
-    class="flex flex-grow flex-col -mt-20 h-screen w-full justify-center
-    items-center bg-black">
+    class="relative flex flex-grow flex-col -mt-20 h-screen w-full
+    justify-center items-center bg-black">
+    <Carousel images={carouselImages} />
     <h1
-        class="uppercase font-bold text-white text-3xl md:text-4xl lg:text-5xl
-        w-full md:w-auto p-2 text-center overflow-hidden break-words">
+        class="uppercase z-10 font-bold text-white text-3xl md:text-4xl
+        lg:text-5xl w-full md:w-auto p-2 text-center overflow-hidden break-words">
         Surnadal veterinærpraksis
     </h1>
 
