@@ -3,7 +3,7 @@ ssh root@142.93.235.31 <<EOF
 		pm2 stop all
 		git fetch --all
 		git reset --hard origin/master
-		sed -i 's/link rel="stylesheet" href="index.css?v=DATE"/link rel="stylesheet" href="index.css?v=$(date +%F)"' 
+		sed -i 's/link rel="stylesheet" href="index.css?v=DATE"/link rel="stylesheet" href="index.css?v=$(date +%F)"/g' src/template.html
 		npm install
 		npm run build
 		pm2 start __sapper__/build
