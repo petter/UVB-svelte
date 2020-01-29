@@ -29,13 +29,13 @@
                 name="Vigdis Burger"
                 title="Daglig leder"
                 phone="916 43 977"
-                image="http://www.racemph.com/wp-content/uploads/2016/09/profile-image-placeholder.png"
+                image="/img/headshots/vigdis1.jpg"
                 class={cardClasses} />
             <Card
                 name="MVDr. Uzi Burger"
                 title="Veterinær"
                 phone="916 43 977"
-                image="http://www.racemph.com/wp-content/uploads/2016/09/profile-image-placeholder.png"
+                image="/img/headshots/uzi.jpg"
                 class={cardClasses} />
         </div>
     </div>

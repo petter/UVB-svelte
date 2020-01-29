@@ -17,7 +17,7 @@
     <img
         src={image}
         alt="Bilde av {name}"
-        class="h-20 w-20 rounded-full md:mr-4" />
+        class="h-24 w-24 rounded-full md:mr-4" />
     <div class="text-center md:text-left">
         <h2 class="text-lg font-semibold">{name}</h2>
         <div class="font-hairline text-indigo-800">{title}</div>
