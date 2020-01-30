@@ -19,16 +19,14 @@
 <div class="w-0 md:w-64" />
 <nav
     class="{menuOpen ? 'flex' : 'hidden'} md:flex flex-col fixed z-30 h-screen
-    w-full md:w-64 bg-blue-900 text-white p-4 pt-16 pointer-events-none">
-    <a href="/">
-        <img
-            src="/img/logo/White.svg"
-            alt="logo"
-            class="mb-4 w-full max-w-sm mx-auto" />
-    </a>
+    w-full md:w-64 bg-blue-900 text-white p-4 pt-16">
+    <img
+        src="/img/logo/White.svg"
+        alt="logo"
+        class="mb-4 w-full max-w-sm mx-auto" />
     <div class="flex flex-col">
-        {#each routes as route}
-            <a>test</a>
+        {#each routes as { href, text }}
+            <a {href}>{text}</a>
         {/each}
     </div>
 </nav>

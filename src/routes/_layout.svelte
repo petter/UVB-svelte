@@ -11,8 +11,23 @@
             text: 'Hjem'
         },
         {
-            href: 'contact',
-            segment: 'contact',
+            href: 'team',
+            segment: 'team',
+            text: 'Vårt team'
+        },
+        {
+            href: 'klinikk',
+            segment: 'klinikk',
+            text: 'Klinikk'
+        },
+        {
+            href: 'dyrepensjonat',
+            segment: 'dyrepensjonat',
+            text: 'Dyrepensjonat'
+        },
+        {
+            href: 'kontakt',
+            segment: 'kontakt',
             text: 'Kontakt'
         }
     ];
