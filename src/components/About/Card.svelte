@@ -12,13 +12,13 @@
 </script>
 
 <div
-    class="flex flex-col md:flex-row bg-indigo-200 items-center rounded-lg my-2
+    class="flex flex-col lg:flex-row bg-indigo-200 items-center rounded-lg m-2
     p-6 {className}">
     <img
         src={image}
         alt="Bilde av {name}"
-        class="h-24 w-24 rounded-full md:mr-4" />
-    <div class="text-center md:text-left">
+        class="h-24 w-24 rounded-full lg:mr-4" />
+    <div class="text-center lg:text-left">
         <h2 class="text-lg font-semibold">{name}</h2>
         <div class="font-hairline text-indigo-800">{title}</div>
         <div class="">{phone}</div>

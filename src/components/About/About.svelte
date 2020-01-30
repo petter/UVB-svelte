@@ -2,29 +2,14 @@
     import Card from './Card.svelte';
     import H1 from '../UI/H1.svelte';
 
-    const cardClasses = 'w-full sm:w-5/12 lg:w-full';
+    const cardClasses = 'w-full';
 </script>
 
-<style>
-    @media (min-width: 1024px) {
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 2rem;
-        }
-    }
-</style>
-
-<section class="grid p-6" id="about">
-    <img
-        src="https://images.unsplash.com/photo-1514328525431-eac296c01d82?ixlib=rb-1.2.1&auto=format&fit=crop&w=2197&q=80"
-        alt=""
-        class="hidden lg:block object-cover object-center h-full w-full" />
+<section class="p-6" id="about">
     <div class="flex flex-col">
         <H1 class="self-center">Vårt team</H1>
         <div
-            class="flex flex-wrap lg:flex-col flex-1 justify-around
-            lg:justify-start py-6">
+            class="flex w-full flex-col sm:flex-row flex-1 justify-between py-6">
             <Card
                 name="Vigdis Burger"
                 title="Daglig leder"
