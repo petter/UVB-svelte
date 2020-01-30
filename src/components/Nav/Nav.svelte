@@ -1,6 +1,4 @@
 <script>
-    import Burger from '../UI/Icons/Burger.svelte';
-    import Cross from '../UI/Icons/Cross.svelte';
     export let segment;
     export let routes;
 
@@ -25,8 +23,17 @@
         alt="logo"
         class="mb-4 w-full max-w-sm mx-auto" />
     <div class="flex flex-col">
-        {#each routes as { href, text }}
-            <a {href}>{text}</a>
+        {#each routes as { href, text, segment: routeSegment }}
+            <a
+                {href}
+                on:click={() => (menuOpen = false)}
+                class="hover:pl-2 transition-all {segment === routeSegment && 'pl-2'}">
+                <span
+                    class="border-b {segment === routeSegment ? 'text-blue-100 border-blue-100' : 'text-blue-200 border-blue-200'}
+                    inline-flex transition-all">
+                    {text}
+                </span>
+            </a>
         {/each}
     </div>
 </nav>

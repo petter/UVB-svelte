@@ -14,7 +14,9 @@ module.exports = {
     },
     variants: {
         borderWidth: ['responsive', 'hover', 'focus'],
-        borderStyle: ['responsive', 'hover', 'focus']
+        borderStyle: ['responsive', 'hover', 'focus'],
+        margin: ['responsive', 'hover', 'focus'],
+        padding: ['responsive', 'hover', 'focus']
     },
     plugins: [require('tailwindcss-transitions')()]
 };
