@@ -28,8 +28,8 @@
 
 <header
     id="header"
-    class="relative flex flex-grow flex-col h-screen w-full justify-center
-    items-center bg-black">
+    class="relative flex flex-grow flex-col max-h-1/2 h-screen w-full
+    justify-center items-center bg-black">
     <Carousel images={carouselImages} />
 
     <!-- <img
