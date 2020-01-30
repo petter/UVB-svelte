@@ -18,8 +18,8 @@
 
 <div class="w-0 md:w-64" />
 <nav
-    class="{menuOpen ? 'flex' : 'hidden'} flex-col fixed z-30 h-screen w-full
-    md:w-64 bg-blue-900 text-white p-4 pt-16 pointer-events-none">
+    class="{menuOpen ? 'flex' : 'hidden'} md:flex flex-col fixed z-30 h-screen
+    w-full md:w-64 bg-blue-900 text-white p-4 pt-16 pointer-events-none">
     <a href="/">
         <img
             src="/img/logo/White.svg"
