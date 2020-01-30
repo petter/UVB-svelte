@@ -22,27 +22,15 @@
     ];
 </script>
 
-<style>
-    h1 {
-        text-shadow: 2px 2px 8px black;
-        opacity: 90%;
-    }
-</style>
-
 <svelte:head>
     <title>Surnadal veterinærpraksis</title>
 </svelte:head>
 
 <header
     id="header"
-    class="relative flex flex-grow flex-col -mt-20 h-screen w-full
-    justify-center items-center bg-black">
+    class="relative flex flex-grow flex-col h-screen w-full justify-center
+    items-center bg-black">
     <Carousel images={carouselImages} />
-    <h1
-        class="uppercase z-10 font-bold text-blue-100 text-3xl md:text-4xl
-        lg:text-5xl w-full md:w-auto p-2 text-center overflow-hidden break-words">
-        Surnadal veterinærpraksis
-    </h1>
 
     <!-- <img
         src="/img/logo/Original.svg"

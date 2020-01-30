@@ -1,60 +1,34 @@
 <script>
-    import { onMount } from 'svelte';
-    import Wrapper from './Wrapper.svelte';
-    import Burger from './Burger.svelte';
-
+    import Burger from '../UI/Icons/Burger.svelte';
+    import Cross from '../UI/Icons/Cross.svelte';
     export let segment;
+    export let routes;
 
     let menuOpen = false;
-    const routes = [
-        {
-            href: '.',
-            segment: undefined,
-            text: 'Hjem'
-        },
-        {
-            href: 'contact',
-            segment: 'contact',
-            text: 'Kontakt'
-        }
-    ];
-
-    const activeColor = 'indigo-100';
-    const activeText = `text-${activeColor}`;
-    const transitionDuration = 'transition-100';
-    const linkClasses = (textActive = false) =>
-        `${
-            textActive ? activeText : 'text-indigo-300'
-        } hover:${activeText} transition-colors ${transitionDuration}`;
 </script>
 
-<Wrapper isHome={segment === undefined} class={activeText}>
-    <div class="flex items-center w-10/12 lg:w-auto">
-        <span class="font-semibold text-l sm:text-xl tracking-tight uppercase">
-            Surnadal veterinærpraksis
-        </span>
+<div class="fixed z-50 top-0 left-0 w-screen flex md:hidden justify-center ">
+    <button
+        class="z-50 bg-blue-800 py-2 px-4 text-blue-200"
+        on:click={() => (menuOpen = !menuOpen)}>
+        {menuOpen ? 'LUKK' : 'MENY'}
+    </button>
+
+</div>
+
+<div class="w-0 md:w-64" />
+<nav
+    class="{menuOpen ? 'flex' : 'hidden'} flex-col fixed z-40 h-screen w-full
+    md:w-64 bg-blue-900 text-white p-4 pt-16">
+    <a href="/">
+        <img
+            src="/img/logo/White.svg"
+            alt="logo"
+            class="mb-4 w-full max-w-sm mx-auto" />
+    </a>
+    <div class="flex flex-col">
+        {#each routes as route}
+            <a>test</a>
+        {/each}
     </div>
-    <Burger
-        class="{linkClasses()} w-6 lg:hidden"
-        on:click={() => (menuOpen = !menuOpen)} />
-    <div
-        class:hidden={!menuOpen}
-        class="absolute z-10 top-1 left-0 right-0 p-6 pt-0 lg:static lg:p-0
-        block bg-blue-900 lg:bg-transparent lg:flex lg:items-center lg:w-auto">
-        <div
-            class="flex text-sm justify-start items-start flex-col lg:flex-row
-            lg:flex-grow">
-            {#each routes as route}
-                <a
-                    class="{linkClasses(segment === route.segment)} border-solid
-                    hover:border-solid hover:border-{activeColor} mt-4 lg:mt-0
-                    border-b mr-4 transition-border py-1 {segment === route.segment ? `border-${activeColor}` : 'border-indigo-300'}
-                    "
-                    href={route.href}
-                    on:click={() => (menuOpen = false)}>
-                    {route.text}
-                </a>
-            {/each}
-        </div>
-    </div>
-</Wrapper>
+</nav>
