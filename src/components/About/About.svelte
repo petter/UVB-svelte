@@ -8,7 +8,7 @@
 
 <Section id="about">
     <div class="flex flex-col">
-        <H1 class="self-center">Vårt team</H1>
+        <H1>Vårt team</H1>
         <div
             class="flex w-full flex-col sm:flex-row flex-1 justify-between py-6">
             <Card
