@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import About from '../components/About/About.svelte';
     import Map from '../components/Map.svelte';
-    import Carousel from '../components/Header/Carousel.svelte';
+    import ContainedCarousel from '../components/Header/ContainedCarousel.svelte';
 
     const carouselImages = [
         { img: '/img/tinkerstick.jpg', pos: '17% 92%' },
@@ -26,19 +26,6 @@
     <title>Surnadal veterinærpraksis</title>
 </svelte:head>
 
-<header
-    id="header"
-    class="relative flex flex-grow flex-col max-h-1/2 h-screen w-full
-    justify-center items-center bg-black">
-    <Carousel images={carouselImages} />
-
-    <!-- <img
-        src="/img/logo/Original.svg"
-        class="w-full md:w-1/2 {animStart ? 'opacity-75' : 'opacity-0'}
-        transition-opacity transition-1000 transition-ease-in-out"
-        alt="Surnadal Veterinærpraksis logo" /> -->
-</header>
-
-<About />
+<ContainedCarousel images={carouselImages} />
 
 <Map />
