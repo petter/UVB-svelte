@@ -1,6 +1,7 @@
 <script>
     import Input from '../components/UI/Input.svelte';
     import H1 from '../components/UI/H1.svelte';
+    import P from '../components/UI/P.svelte';
     import Spinner from '../components/UI/Spinner.svelte';
 
     import { sendMail } from '../utils/frontend/api/mail';
@@ -82,6 +83,11 @@
         </div>
     {:else}
         <H1>For spørsmål eller timebestilling - kontakt oss her</H1>
+        <P>
+            Klinikken har faste åpningstider mandag-fredag kl 10:00-17:00, men
+            vi kan også nås på tlf og email etter åpningstid og i
+            helg/helligdager.
+        </P>
         <div class="text-red-700">{error}</div>
         <p>
             Felt markert med
