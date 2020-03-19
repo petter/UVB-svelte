@@ -1,5 +1,6 @@
 <script>
     import H1 from '../components/UI/H1.svelte';
+    import P from '../components/UI/P.svelte';
     import Section from '../components/UI/Section.svelte';
     import ContainedCarousel from '../components/Header/ContainedCarousel.svelte';
 
@@ -30,21 +31,21 @@
 <Section id="klinikk">
     <H1>Klinikk</H1>
 
-    <p>
+    <P>
         Våren 2020 åpner Surnadal veterinærpraksis opp sin nye, velutsyrte
         smådyr klinikk i det tidligere forsamlingshuset
         <i>Folkets hus</i>
         . Her vil vi ta imot hunder, gnagere, reptiler og fugler.
-    </p>
+    </P>
 
-    <p>
+    <P>
         Klinikken vil ha faste åpningstider man-fre kl 10:00-17:00 hvor man kan
         bestille time hos veterinær eller stoppe innom butikken hvor det vil
         være utsalg av veterinære resept-dietter og andre produkter.
-    </p>
+    </P>
 
-    <p>
+    <P>
         Utenfor faste åpningstider kan vi nås på tlf, og vil kunne tilby akutt
         hjelp døgnet rundt på klinikken.
-    </p>
+    </P>
 </Section>
