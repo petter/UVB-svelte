@@ -3,6 +3,7 @@
     import About from '../components/About/About.svelte';
     import Map from '../components/Map.svelte';
     import ContainedCarousel from '../components/Header/ContainedCarousel.svelte';
+    import Section from '../components/UI/Section.svelte';
 
     const carouselImages = [
         { img: '/img/tinkerstick.jpg', pos: '17% 92%' },
@@ -27,5 +28,7 @@
 </svelte:head>
 
 <ContainedCarousel images={carouselImages} />
+
+<Section>introduksjon</Section>
 
 <Map />

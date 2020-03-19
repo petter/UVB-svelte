@@ -1,11 +1,12 @@
 <script>
     import Card from './Card.svelte';
     import H1 from '../UI/H1.svelte';
+    import Section from '../UI/Section.svelte';
 
     const cardClasses = 'w-full';
 </script>
 
-<section class="p-6" id="about">
+<Section id="about">
     <div class="flex flex-col">
         <H1 class="self-center">Vårt team</H1>
         <div
@@ -27,4 +28,4 @@
                 class={cardClasses} />
         </div>
     </div>
-</section>
+</Section>
