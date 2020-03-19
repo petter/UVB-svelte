@@ -45,6 +45,6 @@
 
     <p>
         Utenfor faste åpningstider kan vi nås på tlf, og vil kunne tilby akutt
-        hjelp døgent rundt på klinikken.
+        hjelp døgnet rundt på klinikken.
     </p>
 </Section>
