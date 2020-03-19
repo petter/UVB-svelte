@@ -6,15 +6,16 @@
     export let phone;
     // export let email;
     export let image;
+    export let description;
 
     let className;
     export { className as class };
 </script>
 
-<div class="p-2 w-full">
+<div class="p-2 w-full h-auto">
     <div
-        class="flex flex-col lg:flex-row bg-indigo-200 items-center rounded-lg
-        p-6 {className}">
+        class="flex flex-col lg:flex-row bg-indigo-200 items-center
+        lg:items-start rounded-lg p-6 h-full {className}">
         <img
             src={image}
             alt="Bilde av {name}"
@@ -23,6 +24,7 @@
             <h2 class="text-lg font-semibold">{name}</h2>
             <div class="font-hairline text-indigo-800">{title}</div>
             <div class="">{phone}</div>
+            <div>{description}</div>
             <!-- <Link href="mailto:{email}">{email}</Link> -->
         </div>
     </div>
