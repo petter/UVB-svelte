@@ -1,11 +1,12 @@
 <script>
-    export let images; // array of {img : string, pos : string}
+    export let images = []; // array of {img : string, pos : string}
+    export let interval = 5000;
 
     let cur = 0;
 
     setInterval(() => {
         cur = (cur + 1) % images.length;
-    }, 5000);
+    }, interval);
 </script>
 
 {#each images as { img, pos }, i}
