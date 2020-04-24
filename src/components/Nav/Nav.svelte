@@ -30,13 +30,10 @@
         class="mb-4 w-full max-w-sm mx-auto" />
     <div class="flex flex-col">
         {#each routes as { href, text, segment: routeSegment }}
-            <a
-                {href}
-                on:click={() => (menuOpen = false)}
-                class="hover:pl-2 transition-all {segment === routeSegment && 'pl-2'}">
+            <a {href} on:click={() => (menuOpen = false)} class="mt-1">
                 <span
-                    class="border-b {segment === routeSegment ? 'text-blue-100 border-blue-100' : 'text-blue-200 border-blue-200'}
-                    inline-flex transition-all">
+                    class="font-bold border-b {segment === routeSegment ? 'border-b text-blue-100 border-blue-100' : 'text-blue-200 border-transparent hover:border-blue-200'}
+                    inline-flex transition-all transition-100">
                     {text}
                 </span>
             </a>
