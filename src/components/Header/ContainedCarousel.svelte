@@ -3,9 +3,8 @@
     export let images;
 </script>
 
-<header
-    id="header"
-    class="relative flex flex-grow flex-col max-h-1/2 h-screen w-full
-    justify-center items-center bg-black">
-    <Carousel {images} />
+<header id="header" class="flex max-h-1/2 h-screen w-full">
+    <div class="relative w-full h-full">
+        <Carousel {images} />
+    </div>
 </header>
