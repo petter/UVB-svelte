@@ -6,16 +6,7 @@
 
     const carouselImages = [
         { img: '/img/dogs.jpg', pos: '50% 0%' },
-        { img: '/img/tinkerportrait.jpg', pos: '50% 40%' },
-        { img: '/img/tinkerstick.jpg', pos: '17% 92%' },
-        { img: '/img/tinkerinnature.jpg', pos: '62% 61%' },
-        { img: '/img/baileyinthesun.jpg', pos: '14% 30%' },
-        { img: '/img/uziwithdogswater.jpg', pos: '58% 16%' },
-        { img: '/img/horseflehmenresponse.jpg', pos: '38% 51%' },
-        { img: '/img/tinkerbaileygate.jpg', pos: '44% 71%' },
-        { img: '/img/uzicuddlingbailey.jpg', pos: '58% 23%' },
-        { img: '/img/baileymountain.jpg', pos: 'center' },
-        { img: '/img/uziandbaileywater.jpg', pos: '29% 49%' }
+        { img: '/img/babytinker.jpg', pos: '50% 50%' }
     ];
 </script>
 

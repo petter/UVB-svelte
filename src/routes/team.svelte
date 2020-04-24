@@ -4,9 +4,7 @@
 
     const carouselImages = [
         { img: '/img/vigdispig.jpg', pos: '32% 63%' },
-        { img: '/img/tinkerstick.jpg', pos: '17% 92%' },
         { img: '/img/tinkerinnature.jpg', pos: '62% 61%' },
-        { img: '/img/baileyinthesun.jpg', pos: '14% 30%' },
         { img: '/img/uziwithdogswater.jpg', pos: '58% 16%' },
         { img: '/img/horseflehmenresponse.jpg', pos: '38% 51%' },
         { img: '/img/tinkerbaileygate.jpg', pos: '44% 71%' },

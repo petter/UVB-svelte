@@ -44,7 +44,7 @@
     ];
 
     const carouselImages = [
-        { img: '/img/tinkerinnature.jpg', pos: '62% 61%' },
+        { img: '/img/tinkerinnature.jpg', pos: '65% 35%' },
         { img: '/img/uziwithdogswater.jpg', pos: '58% 16%' },
         { img: '/img/uzicuddlingbailey.jpg', pos: '58% 23%' },
         { img: '/img/horse1.jpg', pos: '47% 46%' }, // Fix focal point
