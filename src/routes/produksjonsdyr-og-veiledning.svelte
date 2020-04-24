@@ -1,5 +1,4 @@
 <script>
-    import About from '../components/About/About.svelte';
     import WithImageCarousel from '../components/Layouts/WithImageCarousel.svelte';
 
     const carouselImages = [
@@ -24,6 +23,4 @@
     <title>Vårt team</title>
 </svelte:head>
 
-<WithImageCarousel images={carouselImages}>
-    <About />
-</WithImageCarousel>
+<WithImageCarousel images={carouselImages} />

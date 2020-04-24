@@ -1,12 +1,20 @@
 <script>
+    import { onMount } from 'svelte';
     export let images = []; // array of {img : string, pos : string}
-    export let interval = 10000;
+    export let interval = 3000;
 
     let cur = 0;
 
-    setInterval(() => {
-        cur = (cur + 1) % images.length;
-    }, interval);
+    onMount(() =>
+        document.addEventListener('keyup', e => {
+            if (e.code === 'Space') {
+                cur = (cur + 1) % images.length;
+            }
+        })
+    );
+    // setInterval(() => {
+    //     cur = (cur + 1) % images.length;
+    // }, interval);
 </script>
 
 {#each images as { img, pos }, i}
