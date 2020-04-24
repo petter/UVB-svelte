@@ -1,7 +1,6 @@
 <script>
     import About from '../components/About/About.svelte';
-    import Row from '../components/UI/Containers/Row.svelte';
-    import VerticalCardCarousel from '../components/UI/VerticalCardCarousel.svelte';
+    import WithImageCarousel from '../components/Layouts/WithImageCarousel.svelte';
 
     const carouselImages = [
         { img: '/img/tinkerstick.jpg', pos: '17% 92%' },
@@ -25,7 +24,6 @@
     <title>Vårt team</title>
 </svelte:head>
 
-<Row>
-    <VerticalCardCarousel images={carouselImages} />
+<WithImageCarousel images={carouselImages}>
     <About />
-</Row>
+</WithImageCarousel>
