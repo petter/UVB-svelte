@@ -12,5 +12,4 @@
 
 <Single>
     <Section>introduksjon</Section>
-    <Map />
 </Single>

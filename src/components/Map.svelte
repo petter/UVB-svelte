@@ -82,6 +82,5 @@
 </style>
 
 <div class="flex flex-col w-full">
-    <div id="map" class="w-full max-h-1/2 h-screen" />
-
+    <div id="map" class="w-full h-screen max-h-1/3" />
 </div>
