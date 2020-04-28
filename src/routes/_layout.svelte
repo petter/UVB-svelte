@@ -48,8 +48,8 @@
         { img: '/img/uziwithdogswater.jpg', pos: '58% 16%' },
         { img: '/img/uzicuddlingbailey.jpg', pos: '58% 23%' },
         { img: '/img/horse1.jpg', pos: '47% 46%' }, // Fix focal point
-        { img: '/img/baileymountain.jpg', pos: 'center' },
-        { img: '/img/uziandbaileywater.jpg', pos: '29% 49%' }
+        { img: '/img/baileymountain.jpg', pos: 'center' }
+        // { img: '/img/uziandbaileywater.jpg', pos: '29% 49%' }
     ];
 </script>
 

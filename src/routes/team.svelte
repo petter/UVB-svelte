@@ -1,6 +1,7 @@
 <script>
     import About from '../components/About/About.svelte';
     import WithImageCarousel from '../components/Layouts/WithImageCarousel.svelte';
+    import Single from '../components/Layouts/Single.svelte';
 
     const carouselImages = [
         { img: '/img/vigdispig.jpg', pos: '32% 63%' },
@@ -29,6 +30,10 @@
     <title>Vårt team</title>
 </svelte:head>
 
-<WithImageCarousel images={carouselImages}>
+<!-- <WithImageCarousel images={carouselImages}>
     <About />
-</WithImageCarousel>
+</WithImageCarousel> -->
+
+<Single>
+    <About />
+</Single>

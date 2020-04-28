@@ -7,7 +7,7 @@
 
 <style>
     nav {
-        box-shadow: rgba(0, 0, 0, 0.5) 1px 0px 5px 5px;
+        /* box-shadow: rgba(0, 0, 0, 0.5) 1px 0px 5px 5px; */
     }
 </style>
 
