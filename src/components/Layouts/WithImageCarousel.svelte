@@ -8,7 +8,7 @@
     export let hideOnMobile = true;
 </script>
 
-<Row>
+<Row class="min-h-1/2">
     <Flex1 class={hideOnMobile && 'hidden lg:flex'}>
         <VerticalCardCarousel {images} />
     </Flex1>

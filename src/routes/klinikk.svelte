@@ -6,7 +6,7 @@
 
     const carouselImages = [
         { img: '/img/bunny.jpg', pos: '50% 30%' },
-        { img: '/img/tinkerwinterwoods.jpg', pos: '40% 40%' },
+        { img: '/img/tinkerwinterwoods.jpg', pos: '55% 40%' },
         { img: '/img/tinkerbaileygate.jpg', pos: '44% 71%' },
         { img: '/img/baileyinthesun.jpg', pos: '14% 30%' },
         { img: '/img/tinkerstick.jpg', pos: '17% 92%' }
