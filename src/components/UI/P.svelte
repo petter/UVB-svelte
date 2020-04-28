@@ -1,3 +1,3 @@
-<p class="my-4">
+<p class="my-2">
     <slot />
 </p>
