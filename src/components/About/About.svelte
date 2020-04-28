@@ -1,6 +1,5 @@
 <script>
     import Card from './Card.svelte';
-    import NewCard from './NewCard.svelte';
     import H1 from '../UI/H1.svelte';
     import Section from '../UI/Section.svelte';
 
@@ -67,7 +66,7 @@
         {#each sections as { title, cards }}
             <H1>{title}</H1>
             {#each cards as card}
-                <NewCard {...card} />
+                <Card {...card} />
             {/each}
         {/each}
     </div>
