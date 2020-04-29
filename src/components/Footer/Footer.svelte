@@ -5,7 +5,7 @@
     import Link from '../UI/Link.svelte';
     import Aapningstider from '../Aapningstider.svelte';
 
-    import Icon from 'fa-svelte';
+    import Icon from '../../../../node_modules/fa-svelte';
     import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook';
     import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone';
     import { faPhoneSquare } from '@fortawesome/free-solid-svg-icons/faPhoneSquare';
