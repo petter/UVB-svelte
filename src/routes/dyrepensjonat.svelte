@@ -6,8 +6,10 @@
 
     const carouselImages = [
         { img: '/img/dogs.jpg', pos: '50% 39%' },
-        { img: '/img/tinkerinwater.jpg', pos: '40% 47%' },
+        { img: '/img/nashnash.jpg', pos: '74% 46%' },
+        // { img: '/img/tinkerinwater.jpg', pos: '40% 47%' },
         { img: '/img/baileyinthepark.jpg', pos: '37% 50%' },
+        { img: '/img/kitty.jpg', pos: '55% 23%' },
         { img: '/img/babytinker.jpg', pos: '50% 50%' }
     ];
 </script>
