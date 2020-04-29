@@ -56,6 +56,12 @@
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
+
+    .icon-group {
+        display: grid;
+        grid-template-columns: 1em max-content;
+        grid-gap: 1em;
+    }
 </style>
 
 <footer class="p-6 bg-blue-900 text-indigo-100 z-30">
@@ -67,7 +73,7 @@
             <div class="mb-6">
                 <H2>{title}</H2>
                 {#each icons as { icon, href, text }}
-                    <div class="flex flex-row my-1 items-center text-xl">
+                    <div class="icon-group items-center text-xl">
                         <Icon data={icon} scale="1.5" class="mr-2" />
                         {#if href}
                             <Link
