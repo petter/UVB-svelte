@@ -1,6 +1,8 @@
 <script>
     import H1 from '../components/UI/H1.svelte';
+    import H2 from '../components/UI/H2.svelte';
     import P from '../components/UI/P.svelte';
+    import Ul from '../components/UI/Ul.svelte';
     import Section from '../components/UI/Section.svelte';
     import WithImageCarousel from '../components/Layouts/WithImageCarousel.svelte';
 
@@ -11,6 +13,16 @@
         { img: '/img/baileyinthesun.jpg', pos: '14% 30%' },
         { img: '/img/tinkerstick.jpg', pos: '17% 92%' }
     ];
+
+    const tjenester = [
+        'Forebyggende helsetjenester',
+        'Diagnosere',
+        'Behandle',
+        'Akutthjelp',
+        'Kirurgi',
+        'Intensivbehandling',
+        'Rehabilitering'
+    ];
 </script>
 
 <svelte:head>
@@ -18,6 +30,7 @@
 </svelte:head>
 
 <WithImageCarousel images={carouselImages}>
+
     <Section id="klinikk">
         <H1>Klinikk</H1>
 
@@ -40,5 +53,30 @@
             For akutte behov døgnet rundt og på helg er vi tilgjengelig på tlf:
             <i>916 43 977</i>
         </P>
+
+    </Section>
+    <Section id="åpningstider">
+        <H2>Åpningstider</H2>
+        <div class="flex flex-col sm:flex-row">
+            <div class="flex flex-col mb-4 sm:mr-10 sm:mb-0">
+                <span class="font-bold">Hverdager</span>
+                <span>08:00 - 09:30</span>
+                <span>16:00 - 19:00</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold">Helg og ferier</span>
+                <span>Etter avtale</span>
+            </div>
+        </div>
+
+    </Section>
+
+    <Section id="tjenester">
+        <H2>Tjenester</H2>
+        <Ul>
+            {#each tjenester as tjeneste}
+                <li>{tjeneste}</li>
+            {/each}
+        </Ul>
     </Section>
 </WithImageCarousel>

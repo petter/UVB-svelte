@@ -14,7 +14,7 @@
         my-auto">
         <VerticalCardCarousel {images} />
     </Flex1>
-    <FlexN n="2">
+    <FlexN n="2" class="flex-col">
         <slot />
     </FlexN>
 </Row>
