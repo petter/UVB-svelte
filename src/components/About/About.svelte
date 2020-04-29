@@ -43,7 +43,7 @@
             name: 'Anders Sæther Moen DVM',
             title: 'Veterinær',
             phone: '905 29 219',
-            images: [{ img: '/img/anders.jpg', pos: '35% 25%' }],
+            images: [{ img: '/img/anders.webp', pos: '35% 25%' }],
             descriptionList: [
                 'Veterinær fra Universitetet i Gent, Belgia',
                 'Produksjonsdyr og hesteveterinær',
