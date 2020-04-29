@@ -30,7 +30,10 @@ polka()
     .use(json())
     .use(
         compression({ threshold: 0 }),
-        sirv('static', { dev }),
+        sirv('static', {
+            dev,
+            maxAge: 2623000
+        }),
         sapper.middleware()
     )
     .listen(PORT, err => {
