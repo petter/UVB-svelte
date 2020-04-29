@@ -1,5 +1,6 @@
 <script>
     import Carousel from '../UI/Carousel.svelte';
+    import Ul from '../UI/Ul.svelte';
     import Flex1 from '../UI/Containers/Flex1.svelte';
     import FlexN from '../UI/Containers/FlexN.svelte';
 
@@ -9,12 +10,6 @@
     export let images;
     export let descriptionList;
 </script>
-
-<style>
-    li {
-        list-style-type: '– ';
-    }
-</style>
 
 <div
     class="w-full max-w-3xl m-2 flex flex-col sm:flex-row rounded-md
@@ -30,10 +25,10 @@
             <div class="text-lg font-hairline text-indigo-800">{title}</div>
             <div class="text-lg">{phone}</div>
         </div>
-        <ul class="ml-2 px-4 py-2">
+        <Ul class="ml-2 py-2">
             {#each descriptionList as desc}
                 <li class="my-2">{desc}</li>
             {/each}
-        </ul>
+        </Ul>
     </FlexN>
 </div>
