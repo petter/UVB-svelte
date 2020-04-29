@@ -25,7 +25,7 @@
                     properties: {
                         title: 'Surnadal Veterinærpraksis',
                         description:
-                            'Ved folketshus i Surnadal ligger klinikken vår. Kom innom!'
+                            'Ved folkets hus i Surnadal ligger klinikken vår. Kom innom!'
                     }
                 }
             ]
