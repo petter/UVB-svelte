@@ -68,7 +68,7 @@
                 <H2>{title}</H2>
                 {#each icons as { icon, href, text }}
                     <div class="flex flex-row my-1 items-center text-xl">
-                        <Icon {icon} class="mr-2 text-2xl" />
+                        <Icon data={icon} scale="1.5" class="mr-2" />
                         {#if href}
                             <Link
                                 defaultColor="white"
