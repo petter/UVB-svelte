@@ -10,7 +10,6 @@
             phone: '916 43 977',
             images: [
                 { img: '/img/vigdispig.jpg', pos: '32% 13%' },
-                { img: '/img/vigdisandwit.jpg', pos: '64% 46%' },
                 { img: '/img/vigdishorse.jpg', pos: '43% 10%' }
             ],
             descriptionList: [
@@ -25,11 +24,10 @@
             phone: '929 88 307',
             images: [
                 { img: '/img/uziandbaileywater.jpg', pos: '48% 44%' },
-                { img: '/img/uziandbaileywater.jpg', pos: '48% 44%' },
-                { img: '/img/uzidogsandcow.jpg', pos: '52% 62%' },
-                { img: '/img/uzikissingbelle.jpg', pos: '39% 37%' },
-                { img: '/img/uziinnature.jpg', pos: '46% 40%' },
-                { img: '/img/uzidogsandcow2.jpg', pos: '57% 38%' }
+                { img: '/img/uzidogsandcow.jpg', pos: '52% 62%' }
+                // { img: '/img/uzikissingbelle.jpg', pos: '39% 37%' },
+                // { img: '/img/uziinnature.jpg', pos: '46% 40%' },
+                // { img: '/img/uzidogsandcow2.jpg', pos: '57% 38%' }
             ],
             descriptionList: [
                 'Veterinær fra University of veterinary and pharmaceutical sciences Brno',
