@@ -4,6 +4,7 @@
     import P from '../components/UI/P.svelte';
     import Ul from '../components/UI/Ul.svelte';
     import Section from '../components/UI/Section.svelte';
+    import Aapningstider from '../components/Aapningstider.svelte';
     import WithImageCarousel from '../components/Layouts/WithImageCarousel.svelte';
 
     const carouselImages = [
@@ -56,19 +57,7 @@
 
     </Section>
     <Section id="åpningstider">
-        <H2>Åpningstider</H2>
-        <div class="flex flex-col sm:flex-row">
-            <div class="flex flex-col mb-4 sm:mr-10 sm:mb-0">
-                <span class="font-bold">Hverdager</span>
-                <span>08:00 - 09:30</span>
-                <span>16:00 - 19:00</span>
-            </div>
-            <div class="flex flex-col">
-                <span class="font-bold">Helg og ferier</span>
-                <span>Etter avtale</span>
-            </div>
-        </div>
-
+        <Aapningstider />
     </Section>
 
     <Section id="tjenester">

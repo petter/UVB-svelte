@@ -3,8 +3,6 @@
     export { className as class };
 </script>
 
-<h2
-    class="text-2xl {!className.includes('text-') ? 'text-gray-900' : ''}
-    {className}">
+<h2 class="text-2xl {className}">
     <slot />
 </h2>
