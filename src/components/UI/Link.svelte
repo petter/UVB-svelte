@@ -3,8 +3,8 @@
     let className = '';
     export { className as class };
 
-    let defaultColor = 'blue-700';
-    let hoverColor = 'blue-900';
+    export let defaultColor = 'blue-700';
+    export let hoverColor = 'blue-900';
 </script>
 
 <a
