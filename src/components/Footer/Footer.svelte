@@ -27,7 +27,7 @@
                 },
                 {
                     icon: faMapMarkerAlt,
-                    text: 'Hamnesveien 210<br/>6650 Surnadal'
+                    text: '<address>Hamnesveien 210<br/>6650 Surnadal</address>'
                 }
             ]
         },
