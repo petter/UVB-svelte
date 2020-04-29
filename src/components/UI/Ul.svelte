@@ -5,7 +5,7 @@
 
 <style>
     ul {
-        list-style-type: '– ';
+        list-style-type: '- ';
     }
 </style>
 
