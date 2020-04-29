@@ -11,7 +11,7 @@
     }
 </style>
 
-<div class="fixed z-40 top-0 left-0 w-screen flex md:hidden justify-center ">
+<div class="fixed z-50 top-0 left-0 w-screen flex md:hidden justify-center ">
     <button
         class="bg-blue-800 py-2 px-4 text-blue-200"
         on:click={() => (menuOpen = !menuOpen)}>
@@ -22,7 +22,7 @@
 
 <div class="w-0 md:w-64" />
 <nav
-    class="{menuOpen ? 'flex' : 'hidden'} md:flex flex-col fixed z-20
+    class="{menuOpen ? 'flex' : 'hidden'} md:flex flex-col fixed z-40 md:z-30
     min-h-screen w-full md:w-64 bg-blue-900 text-white p-4 pt-16">
     <img
         src="/img/logo/White.svg"
