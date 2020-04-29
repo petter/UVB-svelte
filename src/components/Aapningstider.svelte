@@ -8,8 +8,16 @@
 <div class="flex flex-col {expandOnDesktop && 'sm:flex-row'}">
     <div class="flex flex-col mb-4 {expandOnDesktop && 'sm:mr-10 sm:mb-0'}">
         <span class="font-bold">Hverdager</span>
-        <span>08:00 - 09:30</span>
-        <span>16:00 - 19:00</span>
+        <span>
+            <time>08:00</time>
+            -
+            <time>09:30</time>
+        </span>
+        <span>
+            <time>16:00</time>
+            -
+            <time>19:00</time>
+        </span>
     </div>
     <div class="flex flex-col">
         <span class="font-bold">Helg og ferier</span>
