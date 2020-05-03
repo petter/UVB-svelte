@@ -1,6 +1,7 @@
 <script>
     import WithImageCarousel from '../components/Layouts/WithImageCarousel.svelte';
     import H1 from '../components/UI/H1.svelte';
+    import H2 from '../components/UI/H2.svelte';
     import Ul from '../components/UI/Ul.svelte';
     import Section from '../components/UI/Section.svelte';
 
@@ -12,7 +13,6 @@
     ];
 
     const lis = [
-        'Konsept/visjon: skadefri hest og prestasjon',
         'Helsesjekk ved kjøp/salg/forsikring',
         'Munnhuleundersøkelse og behandling',
         'Halthetsutredelse',
@@ -29,7 +29,8 @@
 
 <WithImageCarousel images={carouselImages}>
     <Section id="hestepraksis">
-        <H1>Konsept/visjon: skadefri hest og prestasjon</H1>
+        <H1>Hestepraksis</H1>
+        <H2>Konsept/visjon: skadefri hest og prestasjon</H2>
         <Ul>
             {#each lis as text}
                 <li>{text}</li>
