@@ -19,6 +19,6 @@
     }
 </style>
 
-<ul class="px-6">
+<ul class="px-6 {className}">
     <slot />
 </ul>
