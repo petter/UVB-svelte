@@ -15,7 +15,7 @@
             descriptionList: [
                 'Sisteårs veterinærstudent ved University of veterinary and pharmaceutical sciences Brno',
                 'Spesiell interesse for hest og produksjonsdyr, med fokus på skadeforebygging og reproduksjon ',
-                'Hestemenneske med mange år som aktiv konkurranse rytter'
+                'Hestemenneske med mange år som aktiv konkurranserytter'
             ]
         },
         {
