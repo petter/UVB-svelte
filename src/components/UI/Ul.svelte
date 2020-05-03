@@ -5,7 +5,17 @@
 
 <style>
     ul {
-        list-style-type: '- ';
+        list-style-type: none;
+    }
+
+    ul :global(li::before) {
+        content: '-';
+        margin-left: -1rem;
+        margin-right: 0.65rem;
+    }
+
+    ul :global(li) {
+        display: block;
     }
 </style>
 
