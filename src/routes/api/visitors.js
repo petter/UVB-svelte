@@ -1,6 +1,7 @@
 import VisitorService from '../../backend/service/Visitor';
 
 export const get = async (req, res) => {
-    const visitors = await VisitorService.getAll();
-    res.end(JSON.stringify({ visitors: visitors.length }));
+    const totalVisitors = await VisitorService.getTotalVisitors();
+    const uniqueVisitors = await VisitorService.getUniqueVisitors();
+    res.end(JSON.stringify({ totalVisitors, uniqueVisitors }));
 };

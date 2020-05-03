@@ -6,6 +6,15 @@ export default {
     },
 
     getAll: async () => {
-        return await VisitorModel.find();
+        return VisitorModel.find();
+    },
+
+    getTotalVisitors: async () => {
+        return VisitorModel.count();
+    },
+
+    getUniqueVisitors: async () => {
+        return (await VisitorModel.aggregate([{ $group: { _id: '$ip' } }]))
+            .length;
     }
 };
