@@ -1,3 +1,5 @@
+import VisitorService from './service/Visitor';
+
 export default (req, res) => {
-    console.log(req.path);
+    VisitorService.register(req.path);
 };

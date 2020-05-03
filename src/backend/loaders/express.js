@@ -11,5 +11,6 @@ export default ({ app, dev }) => {
         .use(sirv('static', { dev, maxAge: 31536000 }))
         .use(sapper.middleware({ session: sessionHandler }));
 
+    app.set('trust proxy', true);
     return app;
 };

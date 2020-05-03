@@ -2,7 +2,6 @@ import mail from '../../backend/utils/mail';
 
 const validateField = val => val !== undefined;
 
-export const get = (req, res) => res.end(JSON.stringify(process.env));
 export const post = (req, res) => {
     console.log(req.body);
     const { email, name, phone, message } = req.body;
