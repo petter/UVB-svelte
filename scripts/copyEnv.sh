@@ -1,1 +1,0 @@
-scp .env root@142.93.235.31:~/app/UVB-svelte

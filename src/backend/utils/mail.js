@@ -3,8 +3,8 @@ class Mail {
         this.transport = transport;
     }
 
-    send(mail, cb) {
-        this.transport.sendMail(mail, cb);
+    async send(mail, cb) {
+        return this.transport.sendMail(mail, cb);
     }
 }
 

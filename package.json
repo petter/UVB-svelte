@@ -1,7 +1,7 @@
 {
-    "name": "TODO",
-    "description": "TODO",
-    "version": "0.0.1",
+    "name": "uvb",
+    "description": "Website for Surnadal Veterinærpraksis.",
+    "version": "1.0.0",
     "scripts": {
         "dev": "sapper dev",
         "watch:tailwind": "postcss static/tailwind.css -o static/index.css -w",
@@ -12,8 +12,7 @@
         "cy:run": "cypress run",
         "cy:open": "cypress open",
         "test": "run-p --race dev cy:run",
-        "deploy": "./scripts/deploy.sh",
-        "copyEnv": "./scripts/copyEnv.sh"
+        "deploy": "./scripts/deploy.sh"
     },
     "dependencies": {
         "@fortawesome/free-brands-svg-icons": "^5.13.0",
