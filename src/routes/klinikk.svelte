@@ -1,11 +1,11 @@
 <script>
-    import H1 from '../components/UI/H1.svelte';
-    import H2 from '../components/UI/H2.svelte';
-    import P from '../components/UI/P.svelte';
-    import Ul from '../components/UI/Ul.svelte';
-    import Section from '../components/UI/Section.svelte';
-    import Aapningstider from '../components/Aapningstider.svelte';
-    import WithImageCarousel from '../components/Layouts/WithImageCarousel.svelte';
+    import H1 from '../frontend/components/UI/H1.svelte';
+    import H2 from '../frontend/components/UI/H2.svelte';
+    import P from '../frontend/components/UI/P.svelte';
+    import Ul from '../frontend/components/UI/Ul.svelte';
+    import Section from '../frontend/components/UI/Section.svelte';
+    import Aapningstider from '../frontend/components/Aapningstider.svelte';
+    import WithImageCarousel from '../frontend/components/Layouts/WithImageCarousel.svelte';
 
     const carouselImages = [
         { img: '/img/bunny.jpg', pos: '50% 30%' },

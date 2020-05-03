@@ -1,7 +1,7 @@
 <script>
-    import About from '../components/About/About.svelte';
-    import WithImageCarousel from '../components/Layouts/WithImageCarousel.svelte';
-    import Single from '../components/Layouts/Single.svelte';
+    import About from '../frontend/components/About/About.svelte';
+    import WithImageCarousel from '../frontend/components/Layouts/WithImageCarousel.svelte';
+    import Single from '../frontend/components/Layouts/Single.svelte';
 
     // const carouselImages = [
     // { img: '/img/tinkerinnature.jpg', pos: '62% 61%' },

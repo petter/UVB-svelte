@@ -4,7 +4,8 @@ import compression from 'compression';
 import { json } from 'body-parser';
 import * as sapper from '@sapper/server';
 import nodemailer from 'nodemailer';
-import mail from './utils/backend/mail';
+
+import mail from './backend/utils/mail';
 require('dotenv-flow').config();
 
 const {

@@ -1,5 +1,3 @@
-import nodemailer from 'nodemailer';
-
 class Mail {
     setTransport(transport) {
         this.transport = transport;

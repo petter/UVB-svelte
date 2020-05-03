@@ -1,4 +1,4 @@
-import mail from '../../utils/backend/mail';
+import mail from '../../backend/utils/mail';
 
 const validateField = val => val !== undefined;
 

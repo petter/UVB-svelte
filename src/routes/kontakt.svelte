@@ -1,11 +1,11 @@
 <script>
-    import Input from '../components/UI/Input.svelte';
-    import H1 from '../components/UI/H1.svelte';
-    import P from '../components/UI/P.svelte';
-    import Spinner from '../components/UI/Spinner.svelte';
-    import Single from '../components/Layouts/Single.svelte';
+    import Input from '../frontend/components/UI/Input.svelte';
+    import H1 from '../frontend/components/UI/H1.svelte';
+    import P from '../frontend/components/UI/P.svelte';
+    import Spinner from '../frontend/components/UI/Spinner.svelte';
+    import Single from '../frontend/components/Layouts/Single.svelte';
 
-    import { sendMail } from '../utils/frontend/api/mail';
+    import { sendMail } from '../frontend/utils/api/mail';
 
     let initialFormValues = [
         {

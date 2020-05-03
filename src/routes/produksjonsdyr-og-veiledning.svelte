@@ -1,8 +1,8 @@
 <script>
-    import WithImageCarousel from '../components/Layouts/WithImageCarousel.svelte';
-    import H1 from '../components/UI/H1.svelte';
-    import Ul from '../components/UI/Ul.svelte';
-    import Section from '../components/UI/Section.svelte';
+    import WithImageCarousel from '../frontend/components/Layouts/WithImageCarousel.svelte';
+    import H1 from '../frontend/components/UI/H1.svelte';
+    import Ul from '../frontend/components/UI/Ul.svelte';
+    import Section from '../frontend/components/UI/Section.svelte';
 
     const carouselImages = [
         { img: '/img/cows.jpg', pos: '30% 44%' },

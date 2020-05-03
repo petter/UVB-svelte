@@ -1,7 +1,7 @@
 <script>
-    import Nav from '../components/Nav/Nav.svelte';
-    import Footer from '../components/Footer/Footer.svelte';
-    import ContainedCarousel from '../components/Header/ContainedCarousel.svelte';
+    import Nav from '../frontend/components/Nav/Nav.svelte';
+    import Footer from '../frontend/components/Footer/Footer.svelte';
+    import ContainedCarousel from '../frontend/components/Header/ContainedCarousel.svelte';
 
     export let segment;
 
