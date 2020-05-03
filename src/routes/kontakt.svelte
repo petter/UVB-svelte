@@ -76,7 +76,6 @@
 </svelte:head>
 
 <Single>
-
     <div class="flex flex-col max-w-4xl w-full mx-auto p-6">
         {#if loading}
             <div
@@ -86,11 +85,11 @@
             </div>
         {:else}
             <H1>For spørsmål eller timebestilling - kontakt oss her</H1>
-            <P>
+            <!-- <P>
                 Klinikken har faste åpningstider mandag-fredag kl 10:00-17:00,
                 men vi kan også nås på tlf og email etter åpningstid og i
                 helg/helligdager.
-            </P>
+            </P> -->
             <div class="text-red-700">{error}</div>
             <p>
                 Felt markert med
