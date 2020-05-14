@@ -47,11 +47,21 @@
             tilgjengelige på klinikken på morgen og ettermiddag.
         </P>
         <P>
+            Det er mulighet for time etter avtale på tlf, mail, FB eller ved
+            bruk av kontaktskjema på vår nettside.
+        </P>
+        <!-- <P>
             Det er mulighet for drop-in i de faste åpningstidene, utenom disse
             tidene kan det gjøres timesavtale på tlf, email, facebook eller ved
             bruk av kontaktskjema på vår nettside. Vi er fleksible og
             behjelpelige med å finne en tid som passer for deg og dine behov.
             For akutte behov døgnet rundt og på helg er vi tilgjengelig på tlf:
+            <i>916 43 977</i>
+        </P> -->
+        <P>
+            Vi er fleksible og behjelpelige med å finne en tid som passer for
+            deg og dine behov. For akutte behov døgnet rundt og på helg er vi
+            tilgjengelig på tlf:
             <i>916 43 977</i>
         </P>
 
