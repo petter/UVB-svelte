@@ -18,7 +18,7 @@
             icons: [
                 {
                     icon: faPhoneSquare,
-                    text: '+47 916 43 977'
+                    text: '+47 929 88 307'
                 },
                 {
                     icon: faEnvelopeSquare,

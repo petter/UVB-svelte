@@ -62,7 +62,7 @@
             Vi er fleksible og behjelpelige med å finne en tid som passer for
             deg og dine behov. For akutte behov døgnet rundt og på helg er vi
             tilgjengelig på tlf:
-            <i>916 43 977</i>
+            <i>929 88 307</i>
         </P>
 
     </Section>

@@ -7,7 +7,8 @@
         {
             name: 'Vigdis Sæther Moen Burger',
             title: 'Daglig leder',
-            phone: '916 43 977',
+            // phone: '916 43 977',
+            phone: '',
             images: [
                 { img: '/img/vigdispig.jpg', pos: '32% 13%' },
                 { img: '/img/vigdishorse.jpg', pos: '43% 10%' }
