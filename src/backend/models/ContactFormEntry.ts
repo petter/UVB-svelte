@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const ContactFormEntrySchema = mongoose.Schema({
+const ContactFormEntrySchema = new mongoose.Schema({
     name: String,
     email: String,
     phone: String,

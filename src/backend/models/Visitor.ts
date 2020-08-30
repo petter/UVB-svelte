@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const VisitorSchema = mongoose.Schema({
+const VisitorSchema = new mongoose.Schema({
     path: String,
     ip: String,
     time: Date

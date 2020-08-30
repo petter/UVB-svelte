@@ -19,11 +19,14 @@ export default {
             time: new Date()
         });
 
-        return mail.send({
-            from: `${name} <${email}>`,
-            to: process.env['EMAIL_RCV'],
-            subject: `Kontaktskjema - ${name}`,
-            text: `${message}\n\n${name}${phone != '' ? `\n${phone}` : ''}`
-        });
+        return mail.send(
+            {
+                from: `${name} <${email}>`,
+                to: process.env['EMAIL_RCV'],
+                subject: `Kontaktskjema - ${name}`,
+                text: `${message}\n\n${name}${phone != '' ? `\n${phone}` : ''}`
+            },
+            () => console.log('Mail sendt')
+        );
     }
 };

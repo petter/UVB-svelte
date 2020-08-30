@@ -10,7 +10,7 @@ export default {
     },
 
     getTotalVisitors: async () => {
-        return VisitorModel.count();
+        return VisitorModel.estimatedDocumentCount();
     },
 
     getUniqueVisitors: async () => {
