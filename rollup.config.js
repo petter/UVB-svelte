@@ -3,8 +3,10 @@ import replace from '@rollup/plugin-replace';
 import commonjs from 'rollup-plugin-commonjs';
 import json from '@rollup/plugin-json';
 import svelte from 'rollup-plugin-svelte';
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
+import autoPreprocess from 'svelte-preprocess';
+import typescript from '@rollup/plugin-typescript';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 
@@ -13,6 +15,7 @@ const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) =>
+    (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
     (warning.code === 'CIRCULAR_DEPENDENCY' &&
         /[/\\]@sapper[/\\]/.test(warning.message)) ||
     onwarn(warning);
@@ -32,13 +35,15 @@ export default {
             svelte({
                 dev,
                 hydratable: true,
-                emitCss: true
+                emitCss: true,
+                preprocess: autoPreprocess()
             }),
             resolve({
                 browser: true,
                 dedupe
             }),
             commonjs(),
+            typescript({ sourceMap: dev }),
             json(),
 
             legacy &&
@@ -70,7 +75,7 @@ export default {
                     module: true
                 })
         ],
-
+        preserveEntrySignatures: 'strict',
         onwarn
     },
 
@@ -83,6 +88,7 @@ export default {
                 'process.env.NODE_ENV': JSON.stringify(mode)
             }),
             svelte({
+                preprocess: autoPreprocess(),
                 generate: 'ssr',
                 dev
             }),
@@ -90,13 +96,14 @@ export default {
                 dedupe
             }),
             commonjs(),
+            typescript({ sourceMap: dev }),
             json()
         ],
         external: Object.keys(pkg.dependencies).concat(
             require('module').builtinModules ||
                 Object.keys(process.binding('natives'))
         ),
-
+        preserveEntrySignatures: 'strict',
         onwarn
     },
 
