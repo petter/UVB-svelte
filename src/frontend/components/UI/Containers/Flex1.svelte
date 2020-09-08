@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
     import FlexN from './FlexN.svelte';
 
-    let className;
+    let className: string | undefined;
     export { className as class };
 </script>
 

@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
     import Carousel from '../UI/Carousel.svelte';
     import Ul from '../UI/Ul.svelte';
     import Flex1 from '../UI/Containers/Flex1.svelte';
     import FlexN from '../UI/Containers/FlexN.svelte';
 
-    export let name;
-    export let title;
-    export let phone;
+    export let name: string;
+    export let title: string;
+    export let phone: string;
     export let images;
     export let descriptionList;
 </script>
